@@ -53,7 +53,7 @@ You must also install the Express.js npm package to run the server. Since Expres
 
 3. Navigate to http://localhost:5008/ to run this application on your local machine. 
 
-4. On the other hand, you can also access the deployed applicaton at: (The page should open up as per below:)
+4. On the other hand, you can also access the deployed applicaton at: https://offline-text-editor.onrender.com (The page should open up as per below:)
 
 ![Just Another Text Editor Screenshot](public/assets/images/JATE.png)
 
