@@ -14,7 +14,7 @@ module.exports = () => {
       install: './src/js/install.js'
     },
     devServer: {
-      port: 5005,
+      port: 5008,
     },
     output: {
       filename: '[name].bundle.js',
