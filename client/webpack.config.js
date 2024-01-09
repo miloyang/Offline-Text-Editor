@@ -14,7 +14,7 @@ module.exports = () => {
       install: './src/js/install.js'
     },
     devServer: {
-      port: 3002,
+      port: 5005,
     },
     output: {
       filename: '[name].bundle.js',
@@ -23,20 +23,22 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'PWA Note Editor'
+        title: 'JATE'
       }),
 
       new InjectManifest({
         swSrc: './src-sw.js', // Path to the service worker file
-        swDest: 'service-worker.js', // Output service worker file
+        swDest: 'src-sw.js', // Output service worker file
       }),
 
       new WebpackPwaManifest({
-        name: "TEXT EDITOR",
-        short_name: "TEXT EDITOR",
-        description: "Text Editor Application",
-        background_color: "#7eb4e2",
-        theme_color: "#7eb4e2",
+        fingerprints: false,
+        inject: true,
+        name: "Just Another Text Editor",
+        short_name: "JATE",
+        description: "A Text Editor with offline capabilities",
+        background_color: "#225ca3",
+        theme_color: "#225ca3",
         start_url: "./",
         publicPath: "./",
         icons: [{
@@ -50,7 +52,7 @@ module.exports = () => {
     module: {
       rules: [
         {
-          test: /\.css$/i,
+          test: /\.css$/,
           use: ['style-loader', 'css-loader'],
         },
         {
